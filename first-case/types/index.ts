@@ -1,9 +1,11 @@
+export interface IPerformance {
+  playID: string;
+  audience: number;
+}
+
 export interface IInvoice {
   customer: string;
-  performances: {
-    playID: string;
-    audience: number;
-  }[];
+  performances: IPerformance[];
 }
 
 export interface IPlays {
@@ -11,4 +13,9 @@ export interface IPlays {
     name: string;
     type: string;
   };
+}
+
+export interface IPlay {
+  name: string;
+  type: string;
 }
