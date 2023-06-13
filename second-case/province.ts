@@ -44,6 +44,10 @@ export class Province {
     return this._demand - this.totalProduction;
   }
 
+  get profit() {
+    return this.demandValue - this.demandCost;
+  }
+
   get demandCost() {
     let remainingDemand = this.demand;
     let result = 0;
